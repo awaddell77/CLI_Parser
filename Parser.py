@@ -14,8 +14,8 @@ class Parser:
 
 		
 		for i in range(0, len(self._p_str)):
-			if self._p_str[i] == "\"" and not q_esc: q_esc = True
-			elif self._p_str[i] == "\"" and q_esc: q_esc = False
+			if self._p_str[i] == "\"": q_esc = not q_esc
+			#elif self._p_str[i] == "\"" and q_esc: q_esc = False
 			elif self._p_str[i] != " " and not q_esc: 
 				temp_str += self._p_str[i]
 
